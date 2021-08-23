@@ -1,20 +1,20 @@
 {
-  "name": "pancake-toolkit",
-  "version": "1.0.0",
+  "name": "pancake-toolkit-hoanghaidevvn",
+  "version": "1.0.1",
   "description": "Pancake frontend packages",
-  "private": true,
+  "private": false,
   "workspaces": [
     "packages/*"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pancakeswap/pancake-toolkit.git"
+    "url": "git+http://mirufa.ddns.me/root/tomato-toolkit"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pancakeswap/pancake-toolkit/issues"
+    "url": "http://mirufa.ddns.me/root/tomato-toolkit"
   },
-  "homepage": "https://github.com/pancakeswap/pancake-toolkit#readme",
+  "homepage": "http://mirufa.ddns.me/root/tomato-toolkit#readme",
   "scripts": {
     "build": "lerna run build",
     "test": "lerna run test",

@@ -8,6 +8,7 @@ import CakePrice from "./CakePrice";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SocialLinks from "./SocialLinks";
 import LangSelector from "./LangSelector";
+import logo from "../../../public/logotonatosmall.svg";
 
 interface Props extends PanelProps, PushedProps {}
 
@@ -21,9 +22,8 @@ const Container = styled.div`
 const SettingsEntry = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 8px;
+  padding: 0 0px;
 `;
 
 const SocialEntry = styled.div`
@@ -32,6 +32,11 @@ const SocialEntry = styled.div`
   justify-content: space-between;
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: 0 16px;
+`;
+
+const LogoSmall = styled.img`
+  width: 20px;
+  height: 20px;
 `;
 
 const PanelFooter: React.FC<Props> = ({
@@ -57,11 +62,11 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
-        <CakePrice cakePriceUsd={cakePriceUsd} />
+        {/* <CakePrice cakePriceUsd={cakePriceUsd} /> */}
+        <LogoSmall src={logo}></LogoSmall>
         <SocialLinks />
       </SocialEntry>
       <SettingsEntry>
-        <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
         <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
       </SettingsEntry>
     </Container>

@@ -24,11 +24,18 @@ export default {
   argTypes: {},
 };
 
-const langs: Language[] = [...Array(20)].map((_, i) => ({
-  code: `en${i}`,
-  language: `English${i}`,
-  locale: `Locale${i}`,
-}));
+const langs: Language[] = [{
+  code: `en`,
+  language: `English`,
+  locale: `Locale1`,
+},
+{
+  code: `vn`,
+  language: `Tiếng Việt`,
+  locale: `Locale2`,
+}
+]
+
 
 const UserMenuComponent: React.FC<{ variant?: Variant; text?: string; account?: string }> = ({
   variant = variants.DEFAULT,

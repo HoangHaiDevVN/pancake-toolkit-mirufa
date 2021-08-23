@@ -5,6 +5,7 @@ import { LogoIcon } from "../../../components/Svg";
 import Flex from "../../../components/Box/Flex";
 import { HamburgerIcon, HamburgerCloseIcon, LogoIcon as LogoWithText } from "../icons";
 import MenuButton from "./MenuButton";
+import logo from "../../../public/logotonatosmall.svg";
 
 interface Props {
   isPushed: boolean;
@@ -21,6 +22,9 @@ const blink = keyframes`
 const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
+  font-weight: 900;
+  font-size: 27px;
+  color: #ff9a76;
   .mobile-icon {
     width: 32px;
     ${({ theme }) => theme.mediaQueries.nav} {
@@ -48,6 +52,15 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const LogoSmall = styled.img`
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+`;
+const LogoTextChild = styled.span`
+  color: #c2f784 !important;
+`;
+
 const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
@@ -68,11 +81,13 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
       </MenuButton>
       {isAbsoluteUrl ? (
         <StyledLink as="a" href={href} aria-label="Pancake home page">
-          {innerLogo}
+          <LogoSmall src={logo}></LogoSmall>
+          Toma<span>to</span>
         </StyledLink>
       ) : (
         <StyledLink to={href} aria-label="Pancake home page">
-          {innerLogo}
+          <LogoSmall src={logo}></LogoSmall>
+          Toma<LogoTextChild>to</LogoTextChild>
         </StyledLink>
       )}
     </Flex>
